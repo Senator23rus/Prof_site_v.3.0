@@ -17,6 +17,7 @@ class Сhairman(models.Model):
 class Document(models.Model):
     date_append = models.DateTimeField('date published')
     document = models.FileField()
+    slug = models.SlugField(max_length=100)
 
     def __str__(self):
         return self.name
@@ -29,6 +30,7 @@ class Employee(models.Model):
     phones_num = models.IntegerField()
     e_mail = models.EmailField()
     employee_photo = models.ImageField(default=1)
+    slug = models.SlugField(max_length=100)
 
     def __str__(self):
         return self.name
@@ -38,6 +40,7 @@ class News(models.Model):
     news_date = models.DateTimeField('date published')
     news_text = models.TextField()
     news_photo = models.ImageField()
+    slug = models.SlugField(max_length=100)
 
     def __str__(self):
         return self.name
