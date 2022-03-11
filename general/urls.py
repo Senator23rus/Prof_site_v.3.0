@@ -3,4 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.title),
+    path('news/', views.news),
+
 ]
