@@ -2,7 +2,7 @@
 <html lang="en">
 {% load static %}
   <head>
-    <title>Legalcare - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Профсоюз Ростелеком</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,7 +27,7 @@
 
 	  <nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <div class="navbar-brand-logo"> <img src="images/LogoOPRS111.jpg"> </div>
+	      <div class="navbar-brand-logo"> <img src="{% static 'images/LogoOPRS111.jpg' %}"> </div>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Меню
 	      </button>
@@ -39,14 +39,14 @@
 	          <li class="nav-item"><a href="practice-areas.html" class="nav-link">Документы</a></li>
 	          <li class="nav-item"><a href="news/" class="nav-link">Новости</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
-	          <li class="nav-item cta"><a href="#" class="nav-link">Свяжитесь с нами</a></li>
+	          <li class="nav-item cta"><a href="#contact_us" class="nav-link">Свяжитесь с нами</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
 {% block content %}
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/Общая.JPG');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('/static/images/Общая.JPG');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
@@ -124,8 +124,8 @@
     	<div class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/about.jpg);">
-    					<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(static/images/Общая.JPG);">
+    					<a href="static/video/Video_1.mp4" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
     						<span class="icon-play"></span>
     					</a>
     				</div>
@@ -133,37 +133,37 @@
     			<div class="col-md-6 pl-md-5">
     				<div class="row justify-content-start pt-3 pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<span class="subheading">Welcome to Legalcare</span>
-		            <h2 class="mb-4">We Always Fight For Your Justice to Win</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+		          	<span class="subheading">Добро пожаловать в сообщество</span>
+		            <h2 class="mb-4">Всегда слышим каждого из Вас</h2>
+		            <p>Профсоюз - Что бы быть уверенным в завтрашнем дне!</p>
 		            <div class="tabulation-2 mt-4">
 									<ul class="nav nav-pills nav-fill d-md-flex d-block">
 									  <li class="nav-item mb-md-0 mb-2">
-									    <a class="nav-link active py-2" data-toggle="tab" href="#home1">Our Mission</a>
+									    <a class="nav-link active py-2" data-toggle="tab" href="#home1">Наша задача</a>
 									  </li>
 									  <li class="nav-item px-lg-2 mb-md-0 mb-2">
-									    <a class="nav-link py-2" data-toggle="tab" href="#home2">Our Vision</a>
+									    <a class="nav-link py-2" data-toggle="tab" href="#home2">Наше видение</a>
 									  </li>
 									  <li class="nav-item">
-									    <a class="nav-link py-2 mb-md-0 mb-2" data-toggle="tab" href="#home3">Our Value</a>
+									    <a class="nav-link py-2 mb-md-0 mb-2" data-toggle="tab" href="#home3">Наши возможности</a>
 									  </li>
 									</ul>
 									<div class="tab-content bg-light rounded mt-2">
 									  <div class="tab-pane container p-0 active" id="home1">
-									  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									  	<p>Гарантировать работникам уверенность в соблюдении трудовых прав и сохранения их здоровья и жизни.</p>
 									  </div>
 									  <div class="tab-pane container p-0 fade" id="home2">
-									  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									  	<p>Только социальный диалог с работодателем в рамках действующего законодательства позволяет достигать поставленых задач. </p>
 									  </div>
 									  <div class="tab-pane container p-0 fade" id="home3">
-									  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									  	<p>Учёт мнения профсоюзных органов при установлении систем оплаты труда и иных важных решений работодателя.</p>
 									  </div>
 									</div>
 								</div>
 		            <div class="years d-flex mt-4 mt-md-5">
 		            	<h4>
-			            	<span class="number mr-2" data-number="40">0</span>
-				            <span>Years of Experienced</span>
+			            	<span class="number mr-2" data-number="18">0</span>
+				            <span>Годы опыта</span>
 			            </h4>
 		            </div>
 		          </div>
@@ -177,8 +177,8 @@
     	<div class="container">
     		<div class="row justify-content-center mb-5">
           <div class="col-md-10 text-center heading-section ftco-animate">
-          	<span class="subheading">Explore Case Studies</span>
-            <h2 class="mb-4">1000+ Completed Cases Successfully</h2>
+          	<span class="subheading">Профсоюз - сплочённость коллектива</span>
+            <h2 class="mb-4">Наши Новости и События</h2>
           </div>
         </div>
         <div class="row">
@@ -219,7 +219,7 @@
             </div>
         	</div>
         	<div class="col-md-12 text-center mt-4">
-        		<a href="case.html" class="btn btn-primary px-5">See All Successful Cases</a>
+        		<a href="case.html" class="btn btn-primary px-5">Еще Новости и События</a>
         	</div>
         </div>
     	</div>
@@ -335,28 +335,28 @@
     </section>
 
 
-		<section class="ftco-consultation ftco-section ftco-no-pt ftco-no-pb img" style="background-image: url(images/bg_2.jpg);">
+		<section id="contact_us" class="ftco-consultation ftco-section ftco-no-pt ftco-no-pb img" style="background-image: url(images/bg_2.jpg);">
 			<div class="overlay"></div>
     	<div class="container">
     		<div class="row d-md-flex justify-content-end">
     			<div class="col-md-6 half p-3 py-5 pl-md-5 ftco-animate heading-section heading-section-white">
-    				<span class="subheading">Booking an Appointment</span>
-    				<h2 class="mb-4">Free Consultation</h2>
+    				<span class="subheading" >Нам важно Ваше мнение</span>
+    				<h2 class="mb-4">Свяжитесь с нами</h2>
     				<form action="#" class="consultation">
 	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Your Name">
+	              <input type="text" class="form-control" placeholder="Ваши ФИО">
 	            </div>
 	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Your Email">
+	              <input type="text" class="form-control" placeholder="Ваш Email">
 	            </div>
 	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Subject">
+	              <input type="text" class="form-control" placeholder='Филиал ПАО "Ростелеком"'>
 	            </div>
 	            <div class="form-group">
-	              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+	              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Обращение"></textarea>
 	            </div>
 	            <div class="form-group">
-	              <input type="submit" value="Send message" class="btn btn-dark py-3 px-4">
+	              <input type="submit" value="Отправить" class="btn btn-dark py-3 px-4">
 	            </div>
 	          </form>
     			</div>
@@ -617,9 +617,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
           </div>
         </div>
       </div>
