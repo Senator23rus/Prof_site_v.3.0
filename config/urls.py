@@ -4,13 +4,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
-from general.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',  include('general.urls')),
-    path('home/', include('general.urls')),
-    path('news/', news, name='news'),
+    path('',  include('general.urls'))
 ]
 
 #if settings.DEBUG:

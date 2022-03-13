@@ -9,3 +9,6 @@ def title(request):
 
 def news(request):
     return render(request, 'news.html')
+
+def documents(request):
+    return render(request, 'documents.html')
