@@ -6,7 +6,8 @@ urlpatterns = [
     path('', views.title),
     path('news/', views.news, name='news'),
     path('home/', views.title, name='home'),
+    path('documents/', views.documents, name='documents'),
 
     path('contact/', TemplateView.as_view(template_name="contact.html"), name="contact"),
-    # path('contact/', TemplateView.as_view(template_name="contact.html"), name="contact"), филиалы
+    path('filials/', TemplateView.as_view(template_name="filials.html"), name="filials"), #филиалы
 ]
