@@ -3,8 +3,13 @@
 {% load static %}
   <head>
     <title>Профсоюз Ростелеком</title>
+	   <style>
+	  .form1{color: white}
+
+	  </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -22,6 +27,7 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
   </head>
   <body>
 
@@ -289,22 +295,21 @@
 			<div class="overlay"></div>
     	<div class="container">
     		<div class="row d-md-flex justify-content-end">
-    			<div class="col-md-6 half p-3 py-5 pl-md-5 ftco-animate heading-section heading-section-white">
+    			<div class="col-md-8  p-5 py-5 pl-md-5 ftco-animate heading-section heading-section-white">
     				<span class="subheading" >Нам важно Ваше мнение</span>
     				<h2 class="mb-4">Свяжитесь с нами</h2>
-    				<form action="#" class="consultation">
+    				<form method="POST" novalidate>
+						{% csrf_token %}
 	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Ваши ФИО">
+					{% for field in form %}
+					 <div class="subheading">{{ field.label_tag }}</div>
+					 <div class="subheading">{{ field }}</div>
+					 <div class="subheading">{{ field.errors }}</div>
+
+					{% endfor %}
+
 	            </div>
-	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Ваш Email">
-	            </div>
-	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder='Филиал ПАО "Ростелеком"'>
-	            </div>
-	            <div class="form-group">
-	              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Обращение"></textarea>
-	            </div>
+
 	            <div class="form-group">
 	              <input type="submit" value="Отправить" class="btn btn-dark py-3 px-4">
 	            </div>
