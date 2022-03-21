@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 class Сhairman(models.Model):
     name = models.CharField(max_length=200)
@@ -12,6 +13,16 @@ class Сhairman(models.Model):
 
     def __str__(self):
         return self.name
+
+class Appeal(models.Model):
+    name = models.CharField(max_length=50)
+    e_mail = models.EmailField(max_length=30)
+    filial = models.CharField(max_length=20)
+    message = models.TextField()
+    appeal = models.Manager()
+
+    def is_valid(self):
+        pass
 
 
 class Document(models.Model):
