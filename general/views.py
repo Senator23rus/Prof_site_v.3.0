@@ -12,13 +12,13 @@ def title(request):
 
 def create(request):
     if request.method == "POST":
-        appeal = Appeal(request.POST)
-        if appeal.is_valid():
-            appeal.name = request.POST.get("name")
-            appeal.e_mail = request.POST.get("e_mail")
-            appeal.filial = request.POST.get("filial")
-            appeal.message = request.POST.get("message")
-            appeal.save()
+        appeal = Appeal()
+        # if appeal.is_valid():
+        appeal.name = request.POST.get("name")
+        appeal.e_mail = request.POST.get("e_mail")
+        appeal.filial = request.POST.get("filial")
+        appeal.message = request.POST.get("message")
+        appeal.save()
     return HttpResponseRedirect("/")
 
 def news(request):

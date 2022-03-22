@@ -4,6 +4,8 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9710,3 +9712,38 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+.technology{
+  background: #3f8ffc;
+  width: 100%;
+  padding: 100px;
+  padding-top: 300px;
+  margin-top: -300px;
+  align-items: center;
+  text-align: center;
+}
+
+.technology .contentBx{
+  width: 100%;
+  margin-top: 20px;
+}
+.imgBx{
+  display: flex;
+  position:relative;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 10%;
+  margin-left: 10%;
+
+}
+
+
+.image-logo{
+  max-width: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.image-logo:hover{
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1.5);

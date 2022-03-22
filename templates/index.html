@@ -250,7 +250,7 @@
 	              <div class="back">
 	                <!-- back content -->
 	                <blockquote>
-	                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text &rdquo;</p>
+	                  <p>&ldquo; Там, где профсоюзные организации действуют активно и вместе с тем ответственно, содержательно, создаются эффективные системы коммуникаций между трудовыми коллективами и работодателями, результативно решаются вопросы, связанные с повышением заработной платы, улучшением условий труда, отдыха &rdquo;</p>
 	                </blockquote>
 	                <div class="author d-flex">
 	                  <div class="image align-self-center">
@@ -274,7 +274,7 @@
 	              <div class="back">
 	                <!-- back content -->
 	                <blockquote>
-	                  <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text &rdquo;</p>
+	                  <p>&ldquo; У профсоюзов особая роль. Мы законодательно наделены широкими полномочиями для защиты трудовых прав граждан, и наш большой, во многом без всякого преувеличения уникальный опыт надёжного партнёрства с государством в этой сфере невозможно переоценить &rdquo;</p>
 	                </blockquote>
 	                <div class="author d-flex">
 	                  <div class="image align-self-center">
@@ -301,16 +301,16 @@
     				<form method="POST" novalidate action="create/" class="consultation" >
 						   {% csrf_token %}
 	            <div class="form-group">
-	              <input type="text" name="name"  class="form-control" placeholder="Ваше Имя">
+	              <input type="text" name="name"  class="form-control" placeholder="Ваше Имя" required>
 	            </div>
 	            <div class="form-group">
-	              <input type="text" name="e_mail"class="form-control" placeholder="Ваш E-mail">
+	              <input type="email" name="e_mail" class="form-control" placeholder="Ваш E-mail" required>
 	            </div>
 				<div class="form-group">
-	              <input type="text" name="filial"class="form-control" placeholder="Ваш филиал">
+	              <input type="text" name="filial" class="form-control" placeholder="Ваш филиал" required>
 	            </div>
 	            <div class="form-group">
-	              <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Введите сообщение"></textarea>
+	              <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Введите сообщение" required></textarea>
 	            </div>
 	            <div class="form-group">
 	              <input type="submit" value="Отправить" class="btn btn-dark py-3 px-4">
@@ -351,91 +351,27 @@
 
 
 
+
+
     <section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Testimonial</span>
-            <h2 class="mb-4">Happy Clients</h2>
+          	<span class="subheading">Взаимодействие</span>
+            <h2 class="mb-4">Наши партнеры</h2>
           </div>
         </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+		  <div class="tehnology">
+		  	<div class="contentBx">
+      			<div class="imgBx">
+       				<a href="http://www.profsvyazy.ru" ><img src="{% static 'images/LogoOPRS111.jpg' %}" class="image-logo" alt="Profsvazy" style="max-width: 100px;"></a>
+					<a href="https://www.company.rt.ru/regions/south/about/info"><img src="{% static 'images/RGB_RT_logo-vertical_main_ru.png' %}" class="image-logo" alt="Rostelecom" style="max-width: 100px;"></a>
+        			<a href="https://fnpr.ru/"><img src="{% static 'images/ФНПР.jpg' %}" class="image-logo" alt="fnpr" style="max-width: 100px;"></a>
+      			</div>
+  			</div>
+		  </div>
+	  </div>
+
     </section>
 
 

@@ -83,6 +83,7 @@ DATABASES = {
 
 
     # PostgreSQL
+
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'DB_prof_site',
