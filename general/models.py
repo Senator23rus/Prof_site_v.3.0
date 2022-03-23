@@ -21,9 +21,6 @@ class Appeal(models.Model):
     message = models.TextField()
     appeal = models.Manager()
 
-    def is_valid(self):
-        pass
-
 
 class Document(models.Model):
     date_append = models.DateTimeField('date published')
@@ -31,7 +28,7 @@ class Document(models.Model):
     slug = models.SlugField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.slug
 
 
 class Employee(models.Model):
@@ -54,12 +51,19 @@ class News(models.Model):
     slug = models.SlugField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.news_text
 
 
 class ShortNewsOnMainPage(models.Model):
     short_news_text = models.TextField()
-    short_news_photo = models.ImageField()
+    short_news_photo = models.ImageField(upload_to='images/news/')
+    short_news_header = models.CharField(max_length=30, default="Заголовок")
+    sh_news = models.Manager()
+
+    @property
+    def photo_url(self):
+        if self.short_news_photo and hasattr(self.short_news_photo, 'url'):
+            return self.short_news_photo.url
 
     def __str__(self):
-        return self.name
+        return self.short_news_header

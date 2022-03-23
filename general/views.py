@@ -1,14 +1,15 @@
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect, HttpResponseNotFound
 from django.shortcuts import render
 # from .forms import UserForm
-from .models import Appeal
+from .models import Appeal, ShortNewsOnMainPage
 
 
 
 
 def title(request):
     appeal = Appeal.appeal.all()
-    return render(request, 'index.html', {"appeal": appeal})
+    short_news = ShortNewsOnMainPage.sh_news.all()
+    return render(request, 'index.html', {"appeal": appeal, "short_news": short_news})
 
 def create(request):
     if request.method == "POST":

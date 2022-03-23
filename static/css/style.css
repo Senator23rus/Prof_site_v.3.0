@@ -8686,7 +8686,7 @@ h1, h2, h3, h4, h5,
     background: #afa939; }
     @media (min-width: 992px) {
       .ftco-consultation .overlay {
-        width: 70%; } }
+        width: 50%; } }
   .ftco-consultation .half {
     width: 100%; }
     .ftco-consultation .half h2 {
@@ -9747,3 +9747,4 @@ textarea.form-control {
   opacity: 1;
   z-index: 1;
   transform: scale(1.5);
+}
