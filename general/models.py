@@ -1,18 +1,21 @@
 from django.db import models
 from django import forms
 
+
 class Сhairman(models.Model):
     name = models.CharField(max_length=200)
+    name_organisation = models.CharField(max_length=200,default="Название" )
     position = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
     phones_num = models.CharField(max_length=200)
     e_mail = models.EmailField()
     chairman_photo = models.ImageField(default=1)
     slug = models.SlugField(max_length=100)
-
+    chairman_object = models.Manager()
 
     def __str__(self):
         return self.name
+
 
 class Appeal(models.Model):
     name = models.CharField(max_length=50)
@@ -23,9 +26,16 @@ class Appeal(models.Model):
 
 
 class Document(models.Model):
-    date_append = models.DateTimeField('date published')
-    document = models.FileField()
+    name = models.CharField(max_length=50, default="Название")
+    text_name = models.CharField(max_length=200, default="Введение дата")
+    document = models.FileField(upload_to='documents')
     slug = models.SlugField(max_length=100)
+    doc_object = models.Manager()
+
+    @property
+    def photo_url(self):
+        if self.document and hasattr(self.document, 'url'):
+            return self.document.url
 
     def __str__(self):
         return self.slug
@@ -45,11 +55,11 @@ class Employee(models.Model):
 
 
 class News(models.Model):
-    news_date = models.DateTimeField('date published')
+    news_date = models.DateField('date published')
     news_text = models.TextField()
     news_photo = models.ImageField()
     slug = models.SlugField(max_length=100)
-
+    news_object = models.Manager()
 
     def __str__(self):
         return self.news_text

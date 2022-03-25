@@ -13,7 +13,7 @@ urlpatterns = [
     path('documents/', views.documents, name='documents'),
 
     path('contact/', TemplateView.as_view(template_name="contact.html"), name="contact"),
-    path('filials/', TemplateView.as_view(template_name="filials.html"), name="filials"),
+    path('filials/', views.filials, name="filials"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanen
 from django.shortcuts import render
 from django.core.paginator import Paginator
 # from .forms import UserForm
-from .models import Appeal, ShortNewsOnMainPage, News
+from .models import Appeal, ShortNewsOnMainPage, News, Document, Сhairman
 
 
 
@@ -23,10 +23,15 @@ def create(request):
         appeal.save()
     return HttpResponseRedirect("/")
 
-def news(request, page=1):
-    news = News.objects.all()
-    paginator = Paginator(news, 5)
-    return render(request, 'news.html', {'news': paginator.page(page)})
+def filials(request):
+    filial = Сhairman.chairman_object.all()
+    return render(request, 'filials.html', {"filial": filial})
 
 def documents(request):
-    return render(request, 'documents.html')
+    docs = Document.doc_object.all()
+    return render(request, 'documents.html', {"docs": docs})
+
+def news(request, page=1):
+    news = News.news_object.all()
+    paginator = Paginator(news, 5)
+    return render(request, 'news.html', {'news': paginator.page(page)})
