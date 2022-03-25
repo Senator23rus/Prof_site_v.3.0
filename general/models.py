@@ -50,6 +50,7 @@ class News(models.Model):
     news_photo = models.ImageField()
     slug = models.SlugField(max_length=100)
 
+
     def __str__(self):
         return self.news_text
 
