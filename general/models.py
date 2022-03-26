@@ -9,7 +9,7 @@ class Сhairman(models.Model):
     address = models.CharField(max_length=200)
     phones_num = models.CharField(max_length=200)
     e_mail = models.EmailField()
-    chairman_photo = models.ImageField(default=1)
+    chairman_photo = models.ImageField(default=1, upload_to='images/Chairmans/')
     slug = models.SlugField(max_length=100)
     chairman_object = models.Manager()
 
