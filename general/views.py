@@ -32,6 +32,6 @@ def documents(request):
     return render(request, 'documents.html', {"docs": docs})
 
 def news(request, page=1):
-    news = News.news_object.all()
-    paginator = Paginator(news, 5)
-    return render(request, 'news.html', {'news': paginator.page(page)})
+    news_block = News.news_object.all()
+    paginator = Paginator(news_block, 5)
+    return render(request, 'news.html', {'news_block': paginator.page(page)})

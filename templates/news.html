@@ -1,7 +1,10 @@
 
 {% extends 'index.html' %}
 {% load static %}
+<body>
 {% block content %}
+
+
     <section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/турслетртк3.jpg' %});" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -14,149 +17,65 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
+{% for news in news_block %}
+<section class="ftco-section bg-light mt-2 ">
+    <div class="content">
+        <div class="row">
+
+
+
+
+          <div class="col-md-10 d-flex">
+
+          		<div class="text px-4 py-1">
+          			<h3 class="col-md-12">{{ news.news_title }}</h3>
           		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
-              		</div>
-              	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
-          		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
-              		</div>
-              	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
-          		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
-              		</div>
-              	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
           </div>
 
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
-          		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
-              		</div>
-              	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
-          		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_5.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
+
+
+<!--                Карусель-->
+
+
+                    <div class="col-md-10 ml-4 mt-4">
+                        <div class="carousel-case owl-carousel ftco-owl">
+                            <div class="item">
+		        		        <div class="case_1 img d-flex align-items-center justify-content-center" style="background-image: url({{ news.news_photo.url }});">
+		        			        <div class="text text-center">
+
+		        			        </div>
+		        		        </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+              <div class="text ml-5  d-block col-md-10">
+              	<div class=" topper d-flex align-items-center">
+
+              		<div class=" align-self-stretch justify-content-center">
+              			<p id="news-text"class="px-5 py-5">{{ news.news_text }} </p>
+
               		</div>
               	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                  <p class="btn btn-primary mt-4">{{ news.news_date }}</p>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
-          		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_6.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
-              		</div>
-              	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
+       </div>
+    </div>
+</section>
+
+{% endfor %}
+
         <div class="row mt-5">
           <div class="col text-center">
             <div class="block-27">
               <ul>
-                {% for page in news.paginator.page_range %}
-                     {% if page == news.number %}
+                {% for page in news_block.paginator.page_range %}
+                     {% if page == news_block.number %}
                          <li class="active"><span>{{ page }}</span></li>
                      {% else %}
                          <li><a href="{% url 'news_paged' page %}">{{ page }}</a></li>
@@ -166,16 +85,15 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+
+
+
+
 
 
 {% endblock content %}
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+</body>
 
 
     
-  </body>
+

@@ -55,19 +55,20 @@ class Employee(models.Model):
 
 
 class News(models.Model):
+    news_title = models.CharField(max_length=255, default='название новости')
     news_date = models.DateField('date published')
     news_text = models.TextField()
-    news_photo = models.ImageField()
+    news_photo = models.ImageField(upload_to='images/page_news/')
     slug = models.SlugField(max_length=100)
     news_object = models.Manager()
 
     def __str__(self):
-        return self.news_text
+        return self.news_title
 
 
 class ShortNewsOnMainPage(models.Model):
     short_news_text = models.TextField()
-    short_news_photo = models.ImageField(upload_to='images/news/')
+    short_news_photo = models.ImageField(upload_to='images/main_news/')
     short_news_header = models.CharField(max_length=30, default="Заголовок")
     sh_news = models.Manager()
 

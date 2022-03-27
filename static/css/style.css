@@ -64,6 +64,12 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
+#news-text{
+text-align:justify;
+text-indent: 50px;
+}
+
+
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -8321,7 +8327,7 @@ h1, h2, h3, h4, h5,
       opacity: 1; }
   .owl-carousel .owl-nav {
     position: absolute;
-    top: 50%;
+    top: 100%;
     width: 100%; }
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
@@ -8670,6 +8676,52 @@ h1, h2, h3, h4, h5,
     right: 10px;
     bottom: 10px; }
   .case:hover .text {
+    opacity: 1; }
+
+.case_1 {
+  height: 300px;
+  margin-bottom: 30px;
+  z-index: 0;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14); }
+  .case_1:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0;
+    z-index: -1;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .case_1 .text {
+    z-index: 1;
+    width: 100;
+    opacity: 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .case_1 .text h3 a {
+      color: #fff;
+      font-size: 22px; }
+    .case_1 .text span {
+      color: rgba(255, 255, 255, 0.9); }
+  .case_1:hover:after {
+    opacity: .5;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    transform: scale(1.5);}
+  .case_1:hover .text {
     opacity: 1; }
 
 .ftco-consultation {
