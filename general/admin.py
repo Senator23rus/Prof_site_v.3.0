@@ -7,7 +7,7 @@ admin.site.register(models.Document)
 # admin.site.register(models.Employee)
 admin.site.register(models.News)
 admin.site.register(models.ShortNewsOnMainPage)
-admin.site.register(models.NewsPhoto)
+# admin.site.register(models.NewsPhoto)
 
 
 # admin.site.register(models.Appeal)
@@ -30,6 +30,9 @@ class EmploeeAdmin(admin.ModelAdmin):
 class AppealAdmin(admin.ModelAdmin):
     list_display = ["name", "e_mail", "filial"]
 
+@admin.register(models.NewsPhoto)
+class NewsPhotoAdmin(admin.ModelAdmin):
+    list_display = ["name"]
 
 class FlatPageAdmin(admin.ModelAdmin):
     class Media:
@@ -40,3 +43,5 @@ class FlatPageAdmin(admin.ModelAdmin):
 
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
+
+

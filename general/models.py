@@ -64,6 +64,8 @@ class NewsPhoto(models.Model):
     name = models.CharField(max_length=30)
     file = models.ImageField(upload_to='images/page_news/')
 
+    def __str__(self):
+        return self.name
 
 class News(models.Model):
     news_title = models.CharField(max_length=255, default='название новости')
