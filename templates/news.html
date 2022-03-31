@@ -1,94 +1,84 @@
-
 {% extends 'index.html' %}
 {% load static %}
 <body>
 {% block content %}
 
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/турслетртк3.jpg' %});" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
+<section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/турслетртк3.jpg' %});"
+         data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Наши Новости и События</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Главная </a></span></p>
-          </div>
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+                <h1 class="mb-3 bread">Наши Новости и События</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Главная </a></span></p>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
 {% for news in news_block %}
 <section class="ftco-section bg-light mt-2 ">
     <div class="content">
         <div class="row">
+            <div class="col-md-10 d-flex">
+                <div class="text px-4 py-1">
+                    <h3 class="col-md-12">{{ news.news_title }}</h3>
+                </div>
+            </div>
 
 
+            <!--                Карусель-->
 
 
-          <div class="col-md-10 d-flex">
+            <div class="col-md-10 ml-4 mt-4">
+                <div class="carousel-case owl-carousel ftco-owl">
+                    {% for image in news.news_photo.all %}
+                    <div class="item">
+                        <div class="case_1 img d-flex align-items-center justify-content-center"
+                             style="background-image: url({{ image.file.url }});background-size: contain;">
+                            <div class="text text-center">
 
-          		<div class="text px-4 py-1">
-          			<h3 class="col-md-12">{{ news.news_title }}</h3>
-          		</div>
-          </div>
-
-
-
-<!--                Карусель-->
-
-
-                    <div class="col-md-10 ml-4 mt-4">
-                        <div class="carousel-case owl-carousel ftco-owl">
-                            <div class="item">
-		        		        <div class="case_1 img d-flex align-items-center justify-content-center" style="background-image: url({{ news.news_photo.url }});">
-		        			        <div class="text text-center">
-
-		        			        </div>
-		        		        </div>
                             </div>
                         </div>
                     </div>
+                     {% endfor %}
+                </div>
+            </div>
 
 
+            <div class="text ml-5  d-block col-md-10">
+                <div class=" topper d-flex align-items-center">
 
+                    <div class=" align-self-stretch justify-content-center">
+                        <p id="news-text" class="px-5 py-5" style="color: white; background-color: #afa939;">
+                            {{ news.news_text }} </p>
 
-
-
-              <div class="text ml-5  d-block col-md-10">
-              	<div class=" topper d-flex align-items-center">
-
-              		<div class=" align-self-stretch justify-content-center">
-              			<p id="news-text"class="px-5 py-5" style="color: white; background-color: #afa939;">{{ news.news_text }} </p>
-
-              		</div>
-              	</div>
-                  <p class="btn btn-primary mt-4">{{ news.news_date }}</p>
-              </div>
-       </div>
+                    </div>
+                </div>
+                <p class="btn btn-primary mt-4">{{ news.news_date }}</p>
+            </div>
+        </div>
     </div>
 </section>
 
 {% endfor %}
 
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
+<div class="row mt-5">
+    <div class="col text-center">
+        <div class="block-27">
+            <ul>
                 {% for page in news_block.paginator.page_range %}
-                     {% if page == news_block.number %}
-                         <li class="active"><span>{{ page }}</span></li>
-                     {% else %}
-                         <li><a href="{% url 'news_paged' page %}">{{ page }}</a></li>
-                     {% endif %}
+                {% if page == news_block.number %}
+                <li class="active"><span>{{ page }}</span></li>
+                {% else %}
+                <li><a href="{% url 'news_paged' page %}">{{ page }}</a></li>
+                {% endif %}
                 {% endfor %}
-              </ul>
-            </div>
-          </div>
+            </ul>
         </div>
-
-
-
-
+    </div>
+</div>
 
 
 {% endblock content %}

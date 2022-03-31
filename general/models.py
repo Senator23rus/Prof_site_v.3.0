@@ -4,7 +4,7 @@ from django import forms
 
 class Сhairman(models.Model):
     name = models.CharField(max_length=200)
-    name_organisation = models.CharField(max_length=200,default="Название" )
+    name_organisation = models.CharField(max_length=200, default="Название")
     position = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
     phones_num = models.CharField(max_length=200)
@@ -23,6 +23,12 @@ class Appeal(models.Model):
     filial = models.CharField(max_length=20)
     message = models.TextField()
     appeal = models.Manager()
+
+
+class AppealForm(forms.ModelForm):
+    class Meta:
+        model = Appeal
+        fields = ['name', 'e_mail', 'filial', 'message']
 
 
 class Document(models.Model):
@@ -54,11 +60,16 @@ class Employee(models.Model):
         return self.name
 
 
+class NewsPhoto(models.Model):
+    name = models.CharField(max_length=30)
+    file = models.ImageField(upload_to='images/page_news/')
+
+
 class News(models.Model):
     news_title = models.CharField(max_length=255, default='название новости')
     news_date = models.DateField('date published')
     news_text = models.TextField()
-    news_photo = models.ImageField(upload_to='images/page_news/')
+    news_photo = models.ManyToManyField(NewsPhoto)
     slug = models.SlugField(max_length=100)
     news_object = models.Manager()
 

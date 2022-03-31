@@ -296,7 +296,7 @@
     			<div class="col-md-6 half p-3 py-5 pl-md-5 ftco-animate heading-section heading-section-white">
     				<span class="subheading">Нам важно Ваше мнение</span>
     				<h2 class="mb-4">Свяжитесь с нами</h2>
-    				<form method="POST" novalidate action="create/" class="consultation" >
+    				<form method="POST" novalidate action="{% url 'create' %}" class="consultation" >
 						   {% csrf_token %}
 	            <div class="form-group">
 	              <input type="text" name="name"  class="form-control" placeholder="Ваше Имя" required>
@@ -310,6 +310,19 @@
 	            <div class="form-group">
 	              <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Введите сообщение" required></textarea>
 	            </div>
+
+    			{% if messages %}
+    			    <ul class="messages">
+    			    {% for message in messages %}
+    			        <li {% if message.tags %}
+							class="{{ message.tags }}"
+							{% endif %}>
+    			            {{ message }}
+    			        </li>
+    			    {% endfor %}
+    			    </ul>
+    			{% endif %}
+
 	            <div class="form-group">
 	              <input type="submit" value="Отправить" class="btn btn-dark py-3 px-4">
 	            </div>

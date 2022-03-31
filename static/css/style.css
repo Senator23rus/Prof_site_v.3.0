@@ -69,7 +69,8 @@ text-align:justify;
 text-indent: 50px;
 }
 
-
+.messages .error {color: red; text: bold; font-size: 14pt;  }
+.messages .info {color: white; text: bold; font-size: 14pt;  }
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
